@@ -45,6 +45,7 @@ export declare const makeBusinessSocket: (config: SocketConfig) => {
         [_: string]: string;
     }>;
     updateMediaMessage: (message: import("../Types").WAProto.IWebMessageInfo) => Promise<import("../Types").WAProto.IWebMessageInfo>;
+    sendAlbumMessage: (jid: string, medias: import("../Types").WAProto.IMessage, options?: import("../Types").MiscMessageGenerationOptions) => Promise<string>
     sendMessage: (jid: string, content: import("../Types").AnyMessageContent, options?: import("../Types").MiscMessageGenerationOptions) => Promise<import("../Types").WAProto.WebMessageInfo | undefined>;
     subscribeNewsletterUpdates: (jid: string) => Promise<{
         duration: string;
