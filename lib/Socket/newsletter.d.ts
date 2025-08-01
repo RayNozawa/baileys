@@ -68,9 +68,10 @@ export declare const makeNewsletterSocket: (config: SocketConfig) => {
     presenceSubscribe: (toJid: string, tcToken?: Buffer | undefined) => Promise<void>;
     profilePictureUrl: (jid: string, type?: "image" | "preview", timeoutMs?: number | undefined) => Promise<string | undefined>;
     onWhatsApp: (...jids: string[]) => Promise<{
-        exists: boolean;
+        exists: unknown;
+        lid: unknown;
         jid: string;
-    }[]>;
+    }[] | undefined>;
     fetchBlocklist: () => Promise<string[]>;
     fetchStatus: (jid: string) => Promise<{
         status: string | undefined;
